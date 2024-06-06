@@ -19,14 +19,12 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
       filter: 'brightness(92%)'
     })),
     transition('default => highlighted', [
-      style({
+      animate('300ms ease-out',style({
         transform: 'scale(1.02)'
-      }),
+      })),
       animate(200)
     ])
-  ]
-
-  )]
+  ])]
 })
 export class ListaTarefasComponent implements OnInit {
   listaTarefas: Tarefa[] = [];
