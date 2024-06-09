@@ -30,6 +30,11 @@ export const shownStateTrigger = trigger('shownState',[
     animate(300, style({
       opacity: 1
     }))
+  ]),
+  transition('shown => void',[
+    animate(300, style({
+      opacity: 0
+    }))
   ])
 ]
 )
